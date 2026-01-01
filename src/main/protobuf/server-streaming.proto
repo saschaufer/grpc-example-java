@@ -1,0 +1,16 @@
+syntax = "proto3";
+package de.saschaufer.grpc_example.proto.server_streaming;
+
+option java_multiple_files = true;
+option java_outer_classname = "ServerStreamingProto";
+
+message Input {
+}
+
+message Output {
+  int32 number = 1;
+}
+
+service ServerStreamingService {
+  rpc call(Input) returns (stream Output) {};
+}

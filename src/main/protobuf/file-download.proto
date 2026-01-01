@@ -1,0 +1,18 @@
+syntax = "proto3";
+package de.saschaufer.grpc_example.proto.file_download;
+
+option java_multiple_files = true;
+option java_outer_classname = "FileDownloadProto";
+
+message Metadata {
+  string name = 1;
+  string type = 2;
+}
+
+message File {
+  bytes content = 1;
+}
+
+service FileDownloadService {
+  rpc download(Metadata) returns(stream File);
+}
