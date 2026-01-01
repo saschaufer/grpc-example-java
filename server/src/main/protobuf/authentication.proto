@@ -1,0 +1,17 @@
+syntax = "proto3";
+package de.saschaufer.grpc_example_java.server.proto.auth;
+
+option java_multiple_files = true;
+option java_outer_classname = "AuthProto";
+
+message Input {
+  string string = 1;
+}
+
+message Output {
+  string string = 1;
+}
+
+service AuthService {
+  rpc call(Input) returns (Output) {};
+}

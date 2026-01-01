@@ -1,0 +1,24 @@
+# Spring
+# ==================================================================
+
+spring:
+  application:
+    name: grpc-example
+
+#  Logging
+# ==================================================================
+
+logging:
+  structured:
+    format.console: logstash
+  level:
+    root: warn
+    de.saschaufer: info
+
+#  App
+# ==================================================================
+
+app:
+  uri: "localhost:9090"
+  password: "1234"
+  files-path: "src/test/resources/files/"

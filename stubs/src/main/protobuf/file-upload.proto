@@ -1,0 +1,37 @@
+syntax = "proto3";
+package de.saschaufer.grpc_example_java.stubs.proto.file_upload;
+
+option java_multiple_files = true;
+option java_outer_classname = "FileUploadProto";
+
+message Metadata {
+  string name = 1;
+  string type = 2;
+}
+
+message File {
+  bytes content = 1;
+}
+
+enum Status {
+  PENDING = 0;
+  IN_PROGRESS = 1;
+  SUCCESS = 2;
+  FAILED = 3;
+}
+
+message FileUploadRequest {
+  oneof request {
+    Metadata metadata = 1;
+    File file = 2;
+  }
+}
+
+message FileUploadResponse {
+  string name = 1;
+  Status status = 2;
+}
+
+service FileUploadService {
+  rpc upload(stream FileUploadRequest) returns(FileUploadResponse);
+}

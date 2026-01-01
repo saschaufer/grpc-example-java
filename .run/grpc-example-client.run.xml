@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="grpc-example-client" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <module name="client" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="de.saschaufer.grpc_example_java.client.Application" />
+    <option name="VM_PARAMETERS" value="-Dspring.config.additional-location=file:client/src/main/resources/application.yml" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

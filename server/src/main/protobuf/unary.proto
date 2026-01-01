@@ -1,0 +1,19 @@
+syntax = "proto3";
+package de.saschaufer.grpc_example_java.server.proto.unary;
+
+option java_multiple_files = true;
+option java_outer_classname = "UnaryProto";
+
+message Input {
+  int32 number = 1;
+  string string = 2;
+}
+
+message Output {
+  int64 number = 1;
+  string string = 2;
+}
+
+service UnaryService {
+  rpc call(Input) returns (Output) {};
+}

@@ -1,0 +1,16 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="grpc-example-server" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <module name="server" />
+    <option name="SPRING_BOOT_MAIN_CLASS" value="de.saschaufer.grpc_example_java.server.Application" />
+    <option name="VM_PARAMETERS" value="-Dspring.config.additional-location=file:server/src/main/resources/application.yml" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="de.saschaufer.grpc_example_java.server.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
